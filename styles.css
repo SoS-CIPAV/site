@@ -1,0 +1,85 @@
+
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: #DDDDDD;
+}
+.page-header {
+  background-color: #A94442;
+}
+.page-header > .bg-inverse,
+.page-header > .navbar-dark {
+  background-color: inherit;
+}
+.page-header > header > div > * {
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.site-nav.navbar-dark {
+  background-color: rgba(0,0,0,.2);
+}
+.navbar-dark .navbar-toggler {
+  color: #ECEEEF;
+  outline-color: #ECEEEF;
+}
+.navbar-brand {
+  float: none;
+}
+@media (min-width: 992px) {
+  .collapse.navbar-toggleable-xs {
+    padding-left: 20px;
+    padding-left: 1.25rem;
+  }
+}
+main {
+  padding: 16px 0 0;
+  padding: 1rem 0 0;
+}
+@media (min-width: 768px) {
+  .content-box {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .content-box {
+    max-width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  .content-box {
+    //max-width: 1140px;
+  }
+}
+.content-box {
+  padding-right: 15.0016px;
+  padding-left: 15.0016px;
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-content {
+  //max-width: 630px;
+  //display: inline-block;
+}
+.sidebar-content {
+  //max-width: 300px;
+  //display: inline-block;
+}
+.card {
+  background-color: #FFF;
+  border-color: #AAA;
+}
+.card-title a {
+  color: inherit;
+}
+.my-dl::after {
+  display: table;
+  clear: both;
+  content: "";
+}

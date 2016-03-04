@@ -7,7 +7,7 @@ body {
   background-color: #FDFAFA;
 }
 .page-header {
-  background-color: #A94442;
+  background-color: #a92f2c;
 }
 .page-header > .bg-inverse,
 .page-header > .navbar-dark {
@@ -102,4 +102,11 @@ main h4,
 main h5,
 main h6 {
   color: #873635;
+  font-family: Boogaloo;
+}
+.page-header h2 {
+  font-family: Boogaloo;
+}
+#cadre small {
+  font-family: Tillana;
 }

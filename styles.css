@@ -110,3 +110,8 @@ main h6 {
 #cadre small {
   font-family: Tillana;
 }
+img.media-object {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #AAA;
+}

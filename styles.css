@@ -111,8 +111,9 @@ main h6 {
   font-family: Tillana;
 }
 img.media-object {
-  display: none;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
+  width: 5rem;
+  height: 5rem;
   border: 1px solid #AAA;
 }

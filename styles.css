@@ -28,6 +28,7 @@ body {
   outline-color: #ECEEEF;
 }
 .navbar-brand {
+  font-family: Boogaloo;
   float: none;
 }
 .navbar-dark .navbar-nav .nav-link {

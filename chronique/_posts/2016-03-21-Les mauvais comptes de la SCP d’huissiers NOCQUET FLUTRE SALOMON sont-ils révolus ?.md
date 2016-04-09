@@ -23,7 +23,7 @@ title: Les mauvais comptes de la SCP d’huissiers NOCQUET FLUTRE SALOMON sont-i
 
   <p>Ainsi, l’absence de fiabilité du processus de recouvrement peut entraîner l’annulation de la contrainte par le TASS comme il a été dit plus haut, mais encore les démarches abusives de la SCP NOCQUET SALOMON FLUTRE précédant la signification de la contrainte peuvent conduire le TASS à condamner la CIPAV à des dommages-intérêts (par exemple TASS de Versailles, jugement du 13 novembre 2015) outre la prise en charge des honoraires d’avocat de l’adhérent.</p>
 
-  <p>Résultat des courses : l’huissier a coûté bien cher à la CIPAV en rémunération, en non-recouvrement de cotisations et en indemnités !
+  <p>Résultat des courses : l’huissier a coûté bien cher à la CIPAV en rémunération, en non-recouvrement de cotisations et en indemnités !</p>
   <p>&nbsp;</p>
 
   <p>Cette chronique doit se conclure toutefois par une note d’optimisme. Après une double plainte déposée en 2015 auprès de la Chambre des huissiers et du procureur de la République de Paris, la SCP NOCQUET SALOMON FLUTRE a décidé de manière fort opportune d’abandonner l’envoi de ses lettres problématiques.</p>

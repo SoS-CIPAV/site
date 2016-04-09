@@ -165,3 +165,6 @@ blockquote p {
 .contact-photo {
   background-size: cover;
 }
+.readmore-link {
+  margin-bottom: 0;
+}

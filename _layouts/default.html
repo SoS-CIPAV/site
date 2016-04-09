@@ -1,3 +1,6 @@
+---
+title: SoS Cipav
+---
 <!doctype html>
 <html lang="fr">
   <head>
@@ -5,31 +8,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Association d'entraide aux adhérents de la CIPAV">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Contribuer à la lutte - SoS Cipav</title>
+    <title>{% if page.url != '/' %}{{page.title}} - {% endif %}SoS Cipav</title>
 
-    <!-- Add to homescreen for Chrome on Android -->
+    <!-- Add to homescreen for Chrome on Android - ->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="images/android-desktop.png">
 
-    <!-- Add to homescreen for Safari on iOS -->
+    <!-- Add to homescreen for Safari on iOS - ->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <meta name="apple-mobile-web-app-title" content="SoS Cipav">
     <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!-- Tile icon for Win8 (144x144 + tile color) - ->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+    -->
 
     <link rel="shortcut icon" href="images/favicon.png">
 
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    {% if page.permalink %}
+      <link rel="canonical" href="{{page.permalink}}">
+    {% endif %}
 
-    <link href='https://fonts.googleapis.com/css?family=Boogaloo|Tillana' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Boogaloo|Tillana' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <div class="page-header">
@@ -47,13 +51,14 @@
           <a class="navbar-brand hidden-md-up" href="#">SoS CIPAV   SoS Adhérents .....</a>
           <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
             <div class="nav navbar-nav">
-              <a class="nav-item nav-link" href="/">Accueil</a>
-              <a class="nav-item nav-link" href="conseils.html">Conseils</a>
-              <a class="nav-item nav-link" href="litiges-et-recours.html">Litiges et recours</a>
-              <a class="nav-item nav-link" href="chronique.html">Chronique</a>
-              <a class="nav-item nav-link" href="actualités.html">Actualités</a>
-              <a class="nav-item nav-link active" href="soutien.html">Soutien <span class="sr-only">(page actuel)</span></a>
-              <a class="nav-item nav-link" href="forum">Forum</a>
+              {% assign slugs = page.url | split: '/' %}
+              <a class="nav-item nav-link {% if page.url == "/" %}active{% endif %}" href="/">Accueil {% if page.url == "/" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
+              <a class="nav-item nav-link {% if slugs[1] == "conseil" %}active{% endif %}" href="/conseils">Conseils {% if slugs[1] == "conseils" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
+              <a class="nav-item nav-link {% if slugs[1] == "litiges-et-recours" %}active{% endif %}" href="/litiges-et-recours">Litiges et recours {% if slugs[1] == "litiges-et-recours" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
+              <a class="nav-item nav-link {% if slugs[1] == "chronique" %}active{% endif %}" href="/chronique">Chronique {% if slugs[1] == "chronique" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
+              <a class="nav-item nav-link {% if slugs[1] == "actualités" %}active{% endif %}" href="/actualités">Actualités {% if slugs[1] == "actualités" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
+              <a class="nav-item nav-link {% if slugs[1] == "soutien" %}active{% endif %}" href="/soutien">Soutien {% if slugs[1] == "soutien" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
+              <a class="nav-item nav-link {% if slugs[1] == "forum" %}active{% endif %}" href="/forum">Forum {% if slugs[1] == "forum" %}<span class="sr-only">(page actuel)</span>{% endif %}</a>
             </div>
           </div>
         </div>
@@ -62,22 +67,7 @@
     <main class="content-box">
       <div class="row">
         <div class="main-content text-justify col-lg-8">
-          <div class="card card-block">
-            <h3 class="text-xs-center">Pour peser collectivement sur la CIPAV et les pouvoirs publics,
-              en alertant les médias et l’opinion,
-              <br><strong>rejoignez-nous !</strong>
-            </h3>
-            <p>Voici comment...</p>
-            <h4>Adhérez ou faites un don</h4>
-            <p>Adhésions  et dons à l’association CIPAV SoS adhérents :</p><p class="text-xs-center">15 € et plus (ouvrant droit à déduction fiscale)
-            </p>
-            <p>Chèques à adresser à :</p><p class="text-xs-center">Cipav SoS adhérents,<br>3 chemin du cheval,<br>59 470 Broxeele</p>
-            <h4>Donnez du temps</h4>
-            <p>Devenez accueillant téléphonique bénévole :
-              <br>renseignements au <a href="tel:+33633485869">06 33 48 58 69</a> ou <a href="tel:+33631025271">06 31 02 52 71</a>
-              <br>ou par mail au <a href="mailto:sos.cipavadherents@gmail.com">sos.cipavadherents@gmail.com</a>
-            </p>
-          </div>
+          {{content}}
         </div>
         <div class="sidebar-content col-lg-4">
           <div class="card">
@@ -86,10 +76,13 @@
             </a>
             <div class="card-block">
               <strong>Mars 2016</strong>
-              <ul class="m-b-0 p-l-1 card-text">
+              <ul class="p-l-1 card-text">
                 <li>
                   <a href="chronique.html#Chronique-de-mars-2016">Le coût des huissiers et leurs mauvaises procédures</a>
                 </li>
+              </ul>
+              <strong>Février 2016</strong>
+              <ul class="p-l-1 card-text">
                 <li>
                   <a href="chronique.html#Chronique-de-février-2016">Retour sur le Noël de la CIPAV au TASS d’Evry</a>
                 </li>
@@ -111,7 +104,7 @@
                 </li>
               </ul>
               <strong>Novembre 2015</strong>
-              <ul class="m-b-0 p-l-1 card-text">
+              <ul class="p-l-1 card-text">
                 <li>
                   <a href="actualités.html#novembre-2015">Sont-ils mieux organisés ?</a>
                 </li>
@@ -160,7 +153,6 @@
           sessionStorage.setItem('annonce', $('#annonce').data("url"))
         }
       })();
-
     </script>
   </body>
 </html>

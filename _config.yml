@@ -1,0 +1,20 @@
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-paginate
+  - jekyll-redirect-from
+exclude:
+  - Gemfile*
+  - CNAME
+sass:
+  style: compressed
+permalink: /:categories/:year/:month/:title/
+timezone: Europe/Paris
+defaults:
+-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: page

@@ -159,3 +159,6 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+.card-block :last-child {
+  margin-bottom: 0;
+}

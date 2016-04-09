@@ -162,3 +162,6 @@ blockquote p {
 .card-block :last-child {
   margin-bottom: 0;
 }
+.contact-photo {
+  background-size: cover;
+}

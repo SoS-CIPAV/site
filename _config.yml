@@ -1,9 +1,11 @@
 kramdown:
   input: GFM
   hard_wrap: false
+encoding: utf-8
 gems:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-seo-tag
 exclude:
   - Gemfile*
   - CNAME

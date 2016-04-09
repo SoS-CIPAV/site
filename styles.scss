@@ -1,10 +1,12 @@
-
+---
+---
 html {
   min-height: 100%;
 }
 body {
   min-height: 100%;
   background-color: #FDFAFA;
+  line-height: 1.6;
 }
 .page-header {
   background-color: #a92f2c;
@@ -70,14 +72,6 @@ main {
   margin-right: auto;
   margin-left: auto;
 }
-.main-content {
-  //max-width: 630px;
-  //display: inline-block;
-}
-.sidebar-content {
-  //max-width: 300px;
-  //display: inline-block;
-}
 .card {
   background-color: #FFF;
   border-color: #AAA;
@@ -87,12 +81,11 @@ main {
   color: inherit;
 }
 .card-header {
-  display: block;
-  background-color: #211;
-  //font-weight: bold;
+  background-color: #872623;
   color: #cf9e83;
   font-family: Boogaloo;
-  font-size: 1.9em;
+  font-size: 1.3em;
+  padding: .5rem 1rem;
 }
 .my-dl::after {
   display: table;
@@ -124,12 +117,6 @@ img.media-object {
   width: 5rem;
   height: 5rem;
   border: 1px solid #AAA;
-}
-.sidebar-content a.card-header:hover {
-  color: #cf7063;
-}
-.sidebar-content a.card-header {
-  color: #cf7063;
 }
 .sidebar-content a:hover {
   color: inherit;

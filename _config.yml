@@ -9,7 +9,7 @@ exclude:
   - CNAME
 sass:
   style: compressed
-permalink: /:categories/:year/:month/:title/
+permalink: /:categories/:year/:month/:slug/
 timezone: Europe/Paris
 defaults:
 -
@@ -18,3 +18,9 @@ defaults:
     type: "pages"
   values:
     layout: page
+-
+  scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: post

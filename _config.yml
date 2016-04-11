@@ -9,6 +9,8 @@ gems:
 exclude:
   - Gemfile*
   - CNAME
+  - node_modules
+  - npm-debug.log
 sass:
   style: compressed
 permalink: /:categories/:year/:month/:slug/

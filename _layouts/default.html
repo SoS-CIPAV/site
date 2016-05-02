@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {% seo %}
-
     <link rel="shortcut icon" href="/favicon.png">
 
     {% if page.permalink %}
@@ -19,6 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
 
+    {% seo %}
   </head>
   <body>
     <div class="page-header">
@@ -85,15 +84,15 @@
                   <a href="/actualités/#mai-2016">La CIPAV se fait parler d'elle sur les ondes</a>
                 </li>
               </ul>
-                <strong>Avril 2016</strong>
-                <ul class="p-l-1 card-text">
-                  <li>
-                    <a href="/actualités/#avril-2016-scoop">Pas d’impunité pour les ex-dirigeants de la CIPAV ?</a>
-                  </li>
-                  <li>
-                    <a href="/actualités/#avril-2016">Invalides affiliés à la Cipav : la triple peine</a>
-                  </li>
-                </ul>
+              <strong>Avril 2016</strong>
+              <ul class="p-l-1 card-text">
+                <li>
+                  <a href="/actualités/#avril-2016-scoop">Pas d’impunité pour les ex-dirigeants de la CIPAV ?</a>
+                </li>
+                <li>
+                  <a href="/actualités/#avril-2016">Invalides affiliés à la Cipav : la triple peine</a>
+                </li>
+              </ul>
               <strong>Novembre 2015</strong>
               <ul class="p-l-1 card-text">
                 <li>
@@ -149,6 +148,31 @@
           sessionStorage.setItem('annonce', $('#annonce').data("url"))
         }
       })();
+
+      // Google analytics
+      console.log(location.host)
+      if(location.host == "www.sos-cipav.com"){
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-76228565-1', "{'storage': 'none'}");
+        // use ip address
+        ga('set', 'anonymizeIp', true);
+        function gaPageview() {
+          if (window.location.pathname !== "/") {
+        		ga('send', 'pageview');
+        	} else {
+        		ga('send', 'pageview', {
+        			'page': '/accueil',
+        			'title': 'SoS CIPAV'
+        		});
+        	}
+          console.log("tracking")
+        }
+        gaPageview();
+      }
     </script>
   </body>
 </html>

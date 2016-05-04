@@ -163,3 +163,10 @@ blockquote p {
 :target {
   box-shadow: 0px 0px 7px 1px #A92F2C;
 }
+body > footer {
+  border-top: 2px solid black;
+  font-size: small;
+}
+body > footer.bg-inverse {
+  color: #aaa;
+}

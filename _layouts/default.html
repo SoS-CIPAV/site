@@ -172,11 +172,11 @@
           $('#annonce').modal('hide')
           location = $('#annonce').data("url")
         })
-        if (sessionStorage.getItem('annonce') == $('#annonce').data("url")) {
+        if (localStorage.getItem('annonce') == $('#annonce').data("url")) {
           // do nothing
         } else {
           $('#annonce').modal()
-          sessionStorage.setItem('annonce', $('#annonce').data("url"))
+          localStorage.setItem('annonce', $('#annonce').data("url"))
         }
       })();
 

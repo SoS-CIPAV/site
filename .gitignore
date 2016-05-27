@@ -3,4 +3,5 @@ Gemfile.lock
 node_modules/
 .sass-cache/
 npm-debug.log
-index.sublime-workspace
+*.sublime-workspace
+*.sublime-project

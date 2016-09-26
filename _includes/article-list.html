@@ -1,6 +1,6 @@
 
 {% assign slugs = page.url | split: "/" %}
-{% assign category = slugs[1] %}
+{% assign category = slugs[1] | replace: "%C3%A9", "é" %}
 {% for post in site.posts %}
   {% for cat in post.categories %}
     {% if cat == category %}

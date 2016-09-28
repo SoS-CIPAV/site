@@ -1,5 +1,5 @@
 {% capture weekday %}{% include weekday.fr %}{% endcapture %}
 {{ weekday | capitalize }},
 {{ post.date | date: '%d' }}
-{% include month.fr %}
+{% assign date = post.date %}{% include month.fr %}
 {{ post.date | date: '%Y' }}

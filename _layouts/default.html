@@ -68,55 +68,21 @@
               Chronique du TASS
             </div>
             <div class="card-block">
-              <strong>Septembre 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/09/les-tass-défendent-les-auto-entrepreneurs/">
-                    Les TASS de Créteil et de Pontoise défendent les auto-entrepreneurs relevant de la CIPAV
-                  </a>
-                </li>
+          {% assign not_first = false %}
+          {% for post in site.categories.chronique %}
+            {% assign date = post.date %}
+            {% capture currentdate %}{% include date.month-year.fr %}{% endcapture %}
+            {% if currentdate != lastdate %}
+              {% if not_first %}
               </ul>
-              <strong>Août 2016</strong>
+              {% endif %}
+              <strong>{{ currentdate | capitalize }}</strong>
               <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/07/la-justice-va-t-elle-menacer-la-vague-de-contraintes-estivales/">La justice va t-elle menacer la vague de contraintes estivales</a>
-                </li>
-              </ul>
-              <strong>Juillet 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/07/la-légalité-des-appels-de-cotisations-de-retraite-complémentaire/">La légalité des appels de cotisations de retraite complémentaire</a>
-                </li>
-              </ul>
-              <strong>Juin 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/06/le-tass-de-toulouse-donne-une-leçon-de-calcul-de-cotisations-à-la-cipav/">Le TASS de Toulouse donne une leçon de calcul de cotisations à la CIPAV</a>
-                </li>
-              </ul>
-              <strong>Mai 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/05/le-tass-de-la-creuse-sanctionne-la-cipav-dans-un-cas-d-omission-d-affiliation/">Le TASS de la Creuse sanctionne la CIPAV dans un cas d’omission d’affiliation</a>
-                </li>
-              </ul>
-              <strong>Avril 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/04/l-ircec-et-la-cipav-les-caisses-sœurs-qui-ne-communiquent-pas/">L’IRCEC et la CIPAV&nbsp;: les caisses-sœurs qui ne communiquent pas</a>
-                </li>
-              </ul>
-              <strong>Mars 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/03/les-mauvais-comptes-de-la-scp-d-huissiers-nocquet-flutre-salomon-sont-ils-révolus/">Le coût des huissiers et leurs mauvaises procédures</a>
-                </li>
-              </ul>
-              <strong>Février 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/chronique/2016/02/retour-sur-le-noël-de-la-cipav-au-tass-d-evry/">Retour sur le Noël de la CIPAV au TASS d’Evry</a>
-                </li>
+              {% assign lastdate = currentdate %} 
+              {% assign not_first = true %}
+            {% endif %}
+                <li><a href="{{ post.url }}">{{ post.description }}</a></li>
+          {% endfor %}
               </ul>
             </div>
           </div>
@@ -125,50 +91,30 @@
               Actualités
             </div>
             <div class="card-block">
-              <strong>Septembre 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/actualités/2016/09/la-démission-d-un-administrateur-de-la-cipav/">
-                    La démission d'un administrateur de la Cipav
-                  </a>
-                </li>
-                <li>
-                  <a href="/actualités/2016/09/projet-diffusion-candidats/">
-                    <strong>Peser dans la campagne présidentielle</strong>
-                    <br/>
-                    <em>«&nbsp;Pour que le mal triomphe, seule suffit l'inaction des hommes de bien.&nbsp;»</em>
-                  </a>
-                </li>
+      {% assign not_first = false %}
+      {% assign desired_category = "actualités" %}
+      {% for post in site.posts %}
+        {% for cat in post.categories %}
+          {% if cat == desired_category %}
+            {% assign date = post.date %}
+            {% capture currentdate %}{% include date.month-year.fr %}{% endcapture %}
+            {% if currentdate != lastdate %}
+              {% if not_first %}
               </ul>
-              <strong>Juillet 2016</strong>
+              {% endif %}
+              <strong>{{ currentdate | capitalize }}</strong>
               <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/actualités/2016/07/jacques-escourrou-president-honoraire-de-la-cipav/">Jacques Escourrou, Président honoraire de la CIPAV&nbsp;?</a>
-                </li>
-              </ul>
-              <strong>Mai 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/actualités/2016/05/hausse-des-cotisations-baisse-des-pensions-que-fait-la-cipav-de-notre-argent/">Hausse des cotisations, baisse des pensions&nbsp;: que fait la CIPAV de notre argent&nbsp;?</a>
-                </li>
-                <li>
-                  <a href="/actualités/2016/05/reportage-sur-france-inter-et-france-culture/">La CIPAV fait parler d'elle sur les ondes</a>
-                </li>
-              </ul>
-              <strong>Avril 2016</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/actualités/2016/04/pas-d-impunité-pour-les-ex-dirigeants-de-la-cipav/">Pas d’impunité pour les ex-dirigeants de la CIPAV ?</a>
-                </li>
-                <li>
-                  <a href="/actualités/2016/04/invalides-affiliés-à-la-cipav-la-triple-peine/">Invalides affiliés à la Cipav : la triple peine</a>
-                </li>
-              </ul>
-              <strong>Novembre 2015</strong>
-              <ul class="p-l-1 card-text">
-                <li>
-                  <a href="/actualités/2015/11/sont-ils-mieux-organisés/">Sont-ils mieux organisés ?</a>
-                </li>
+              {% assign lastdate = currentdate %} 
+              {% assign not_first = true %}
+            {% endif %}
+            {% if post.html_title and post.html_title != "" %}
+                <li><a href="{{ post.url }}">{{ post.html_title }}</a></li>
+            {% else %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
               </ul>
             </div>
           </div>
@@ -202,21 +148,21 @@
         </p>
       </div>
     </footer>
-    <div class="modal fade bd-example-modal-lg" id="annonce" data-url="/actualités/2016/09/projet-diffusion-candidats/" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+{% for post in site.posts %}
+  {% if post.flash %}
+    <div class="modal fade bd-example-modal-lg" id="annonce" data-url="{{ post.url }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" style="max-width: 800px; max-width: 50rem;">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="modal-title">Peser dans la campagne présidentielle</h4>
+            <h4 class="modal-title">{{ post.title }}</h4>
           </div>
           <div class="modal-body text-justify">
-            <blockquote>Pour que le mal triomphe, seule suffit l'inaction des hommes de bien.</blockquote>
-            <p>Cette citation de Edmund Burke pourrait trouver son application vis-à-vis de la gestion de la CIPAV.</p>
+            <p>{{ post.description }}</p>
 
-            <p><strong>Agissons alors !</strong></p>
-            <p>Lisez l'article pour savoir comment...</p>
+            <p><a href="{{ post.url }}">Pour en savoir plus ...</a></p>
 
           </div>
           <div class="modal-footer">
@@ -226,6 +172,9 @@
         </div>
       </div>
     </div>
+    {% break %}
+  {% endif %}
+{% endfor %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>

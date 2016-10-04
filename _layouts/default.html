@@ -150,7 +150,7 @@
     </footer>
 {% for post in site.posts %}
   {% if post.flash %}
-    <div class="modal fade bd-example-modal-lg" id="annonce" data-url="{{ post.url }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="annonce" data-url="{{ post.url }}{% if post.flash_id and post.flash_id != '' %}#{{ post.flash_id }}{% endif %}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" style="max-width: 800px; max-width: 50rem;">
         <div class="modal-content">
           <div class="modal-header">
@@ -167,7 +167,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <button type="button" id="lire" class="btn btn-primary">Lire l'article</button>
+            <button type="button" id="lire" class="btn btn-primary">Lire plus</button>
           </div>
         </div>
       </div>

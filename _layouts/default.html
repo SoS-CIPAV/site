@@ -160,7 +160,11 @@
             <h4 class="modal-title">{{ post.title }}</h4>
           </div>
           <div class="modal-body text-justify">
+          {% if post.flash_text and post.flash_text != "" %}
+            <p>{{ post.flash_text }}</p>
+          {% else %}
             <p>{{ post.description }}</p>
+          {% endif %}
 
             <p><a href="{{ post.url }}">Pour en savoir plus ...</a></p>
 

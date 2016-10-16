@@ -67,23 +67,26 @@
             <div class="card-header">
               Chronique du TASS
             </div>
-            <div class="card-block">
-          {% assign not_first = false %}
-          {% for post in site.categories.chronique %}
-            {% assign date = post.date %}
-            {% capture currentdate %}{% include date.month-year.fr %}{% endcapture %}
-            {% if currentdate != lastdate %}
-              {% if not_first %}
+          <div class="card-block">
+        {% assign count = 0 %}
+
+        {% for post in site.categories.chronique limit:2 %}
+          {% assign count = count | plus: 1 %}
+
+          {% assign date = post.date %}
+          {% capture currentdate %}{% include date.month-year.fr %}{% endcapture %}
+          {% if currentdate != lastdate %}
+            {% if count > 1 %}
               </ul>
-              {% endif %}
+            {% endif %}
               <strong>{{ currentdate | capitalize }}</strong>
               <ul class="p-l-1 card-text">
-              {% assign lastdate = currentdate %} 
-              {% assign not_first = true %}
-            {% endif %}
+            {% assign lastdate = currentdate %}
+          {% endif %}
                 <li><a href="{{ post.url }}">{{ post.description }}</a></li>
-          {% endfor %}
+        {% endfor %}
               </ul>
+              <strong><a href="/chronique/">Plus...</a></strong>
             </div>
           </div>
           <div class="card">
@@ -91,21 +94,26 @@
               Actualités
             </div>
             <div class="card-block">
-      {% assign not_first = false %}
       {% assign desired_category = "actualités" %}
+      {% assign count = 0 %}
+
       {% for post in site.posts %}
         {% for cat in post.categories %}
           {% if cat == desired_category %}
+            {% assign count = count | plus: 1 %}
+            {% if count > 3 %}
+              {% break %}
+            {% endif %}
+
             {% assign date = post.date %}
             {% capture currentdate %}{% include date.month-year.fr %}{% endcapture %}
             {% if currentdate != lastdate %}
-              {% if not_first %}
+              {% if count > 1 %}
               </ul>
               {% endif %}
               <strong>{{ currentdate | capitalize }}</strong>
               <ul class="p-l-1 card-text">
-              {% assign lastdate = currentdate %} 
-              {% assign not_first = true %}
+              {% assign lastdate = currentdate %}
             {% endif %}
             {% if post.html_title and post.html_title != "" %}
                 <li><a href="{{ post.url }}">{{ post.html_title }}</a></li>
@@ -116,6 +124,7 @@
         {% endfor %}
       {% endfor %}
               </ul>
+              <strong><a href="/actualités/">Plus...</a></strong>
             </div>
           </div>
         </div>

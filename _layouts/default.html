@@ -96,6 +96,7 @@
             <div class="card-block">
       {% assign desired_category = "actualités" %}
       {% assign count = 0 %}
+      {% assign lastdate = 0 %}
 
       {% for post in site.posts %}
         {% for cat in post.categories %}

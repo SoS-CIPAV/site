@@ -10,4 +10,18 @@
       </time>
     </small>
   </p>
+
+{% if post.footnotes %}
+  <div class="footnotes">
+    Notes&nbsp;:
+    <ol>
+    {% increment note_counter %}
+    {% for note in footnotes %}
+      <li id="footnote{{ note_counter }}">
+        {{ note }}
+      </li>
+    {% endfor %}
+    </ol>
+  </div>
+{% endif %}
 </article>

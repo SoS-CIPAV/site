@@ -2,7 +2,7 @@ kramdown:
   input: GFM
   hard_wrap: false
 encoding: utf-8
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag

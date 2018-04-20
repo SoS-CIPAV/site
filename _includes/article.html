@@ -4,9 +4,13 @@
   <p class="text-muted text-xs-center">{{post.description}}</p>
   <p class="clearfix article-metadata" >
     <small>
+    {% if post.display_date %}
+      <span class="dt-published">{{post.display_date}}</span>
+    {% else %}
       <time class="dt-published" datetime="{{post.date | date_to_xmlschema }}">
         {% include date.long.fr %}
       </time>
+    {% endif %}
     </small>
     <a href="{{ post.url }}">
       Lire plus...

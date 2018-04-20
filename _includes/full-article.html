@@ -5,9 +5,13 @@
   {{post.content}}
   <p class="article-metadata text-xs-right" >
     <small>
+    {% if post.display_date %}
+      <span class="dt-published">{{post.display_date}}</span>
+    {% else %}
       <time class="dt-published" datetime="{{post.date | date_to_xmlschema }}">
         {% include date.long.fr %}
       </time>
+    {% endif %}
     </small>
   </p>
 

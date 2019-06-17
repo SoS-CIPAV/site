@@ -172,3 +172,15 @@ body > footer.bg-inverse {
 .footnotes {
   font-size: 80%;
 }
+
+[aspect-ratio="A4"] {
+  position: relative;
+  padding-top: 141.905%;
+
+  & > * {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
